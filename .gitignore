@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local reports and outputs
+reports/
+*.json
+*.txt
+
+# IDE / System files
+.vscode/
+.idea/
+.DS_Store
