@@ -1,0 +1,378 @@
+[
+  {
+    "id": 1,
+    "prompt": "My email is alice@example.com and I take insulin for diabetes.",
+    "expected": [
+      {"type": "EMAIL", "value": "alice@example.com"},
+      {"type": "MEDICATION", "value": "insulin"},
+      {"type": "MEDICAL_CONDITION", "value": "diabetes"}
+    ]
+  },
+  {
+    "id": 2,
+    "prompt": "Call me at 555-123-4567. My DOB is 1990-01-15.",
+    "expected": [
+      {"type": "PHONE", "value": "555-123-4567"},
+      {"type": "DATE_OF_BIRTH", "value": "1990-01-15"}
+    ]
+  },
+  {
+    "id": 3,
+    "prompt": "Health insurance ID: XY12345678. I have hypertension.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "XY12345678"},
+      {"type": "MEDICAL_CONDITION", "value": "hypertension"}
+    ]
+  },
+  {
+    "id": 4,
+    "prompt": "Address: 123 Main St, Springfield, IL 62701. My name is not PII.",
+    "expected": [
+      {"type": "ADDRESS", "value": "123 Main St, Springfield, IL 62701"}
+    ]
+  },
+  {
+    "id": 5,
+    "prompt": "My medications are Lisinopril and Metformin.",
+    "expected": [
+      {"type": "MEDICATION", "value": "Lisinopril"},
+      {"type": "MEDICATION", "value": "Metformin"}
+    ]
+  },
+  {
+    "id": 6,
+    "prompt": "Please send correspondence to support-team@company.org or call +1-555-987-6543.",
+    "expected": [
+      {"type": "EMAIL", "value": "support-team@company.org"},
+      {"type": "PHONE", "value": "+1-555-987-6543"}
+    ]
+  },
+  {
+    "id": 7,
+    "prompt": "Born on Jan 12, 1995. Current condition is asthma.",
+    "expected": [
+      {"type": "DATE_OF_BIRTH", "value": "Jan 12, 1995"},
+      {"type": "MEDICAL_CONDITION", "value": "asthma"}
+    ]
+  },
+  {
+    "id": 8,
+    "prompt": "My insurance card lists ABC987654321 as the member ID.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "ABC987654321"}
+    ]
+  },
+  {
+    "id": 9,
+    "prompt": "The patient takes Albuterol twice a day for asthma.",
+    "expected": [
+      {"type": "MEDICATION", "value": "Albuterol"},
+      {"type": "MEDICAL_CONDITION", "value": "asthma"}
+    ]
+  },
+  {
+    "id": 10,
+    "prompt": "Our office is at 456 Elm Road, Austin, TX 78701. Reach us at bob.jones@sub.domain.co.uk.",
+    "expected": [
+      {"type": "ADDRESS", "value": "456 Elm Road, Austin, TX 78701"},
+      {"type": "EMAIL", "value": "bob.jones@sub.domain.co.uk"}
+    ]
+  },
+  {
+    "id": 11,
+    "prompt": "I was diagnosed with depression on 05-12-1985.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "depression"},
+      {"type": "DATE_OF_BIRTH", "value": "05-12-1985"}
+    ]
+  },
+  {
+    "id": 12,
+    "prompt": "Please check card number 123-45-6789. The client takes Levothyroxine.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "123-45-6789"},
+      {"type": "MEDICATION", "value": "Levothyroxine"}
+    ]
+  },
+  {
+    "id": 13,
+    "prompt": "If you experience anxiety, you can take Ibuprofen for pain relief.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "anxiety"},
+      {"type": "MEDICATION", "value": "Ibuprofen"}
+    ]
+  },
+  {
+    "id": 14,
+    "prompt": "My primary contact is +44 20 7946 0958, and my address is P.O. Box 789, Redmond, WA 98052.",
+    "expected": [
+      {"type": "PHONE", "value": "+44 20 7946 0958"},
+      {"type": "ADDRESS", "value": "P.O. Box 789, Redmond, WA 98052"}
+    ]
+  },
+  {
+    "id": 15,
+    "prompt": "I am looking for cancer treatments. My email is support@cancerhelp.org.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "cancer"},
+      {"type": "EMAIL", "value": "support@cancerhelp.org"}
+    ]
+  },
+  {
+    "id": 16,
+    "prompt": "My birthdate is 25 December 1980. Can you recommend exercises for arthritis?",
+    "expected": [
+      {"type": "DATE_OF_BIRTH", "value": "25 December 1980"},
+      {"type": "MEDICAL_CONDITION", "value": "arthritis"}
+    ]
+  },
+  {
+    "id": 17,
+    "prompt": "Health ID is GHI6543210. I am taking Amoxicillin.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "GHI6543210"},
+      {"type": "MEDICATION", "value": "Amoxicillin"}
+    ]
+  },
+  {
+    "id": 18,
+    "prompt": "He has a history of heart disease and takes Atorvastatin regularly.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "heart disease"},
+      {"type": "MEDICATION", "value": "Atorvastatin"}
+    ]
+  },
+  {
+    "id": 19,
+    "prompt": "Send the invoice to 789 Pine Boulevard, Seattle, WA 98101 or contact billing@example.com.",
+    "expected": [
+      {"type": "ADDRESS", "value": "789 Pine Boulevard, Seattle, WA 98101"},
+      {"type": "EMAIL", "value": "billing@example.com"}
+    ]
+  },
+  {
+    "id": 20,
+    "prompt": "I was born on 12/05/1992. Please call my therapist at 202-555-0143.",
+    "expected": [
+      {"type": "DATE_OF_BIRTH", "value": "12/05/1992"},
+      {"type": "PHONE", "value": "202-555-0143"}
+    ]
+  },
+  {
+    "id": 21,
+    "prompt": "My insurance number is JKL456789. I suffer from severe migraine.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "JKL456789"},
+      {"type": "MEDICAL_CONDITION", "value": "migraine"}
+    ]
+  },
+  {
+    "id": 22,
+    "prompt": "He takes Prednisone daily. His email is john.doe@med.com.",
+    "expected": [
+      {"type": "MEDICATION", "value": "Prednisone"},
+      {"type": "EMAIL", "value": "john.doe@med.com"}
+    ]
+  },
+  {
+    "id": 23,
+    "prompt": "She lives at 101 Oak Drive, Apt 4B, San Francisco, CA 94102 and was diagnosed with stroke.",
+    "expected": [
+      {"type": "ADDRESS", "value": "101 Oak Drive, Apt 4B, San Francisco, CA 94102"},
+      {"type": "MEDICAL_CONDITION", "value": "stroke"}
+    ]
+  },
+  {
+    "id": 24,
+    "prompt": "I have allergies. I need Amoxicillin. DOB: 09/09/1999.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "allergies"},
+      {"type": "MEDICATION", "value": "Amoxicillin"},
+      {"type": "DATE_OF_BIRTH", "value": "09/09/1999"}
+    ]
+  },
+  {
+    "id": 25,
+    "prompt": "My phone is 312-555-0199 and my health insurance ID is MNO987654.",
+    "expected": [
+      {"type": "PHONE", "value": "312-555-0199"},
+      {"type": "HEALTH_INSURANCE_ID", "value": "MNO987654"}
+    ]
+  },
+  {
+    "id": 26,
+    "prompt": "I take Sertraline for depression. My email is me@domain.com.",
+    "expected": [
+      {"type": "MEDICATION", "value": "Sertraline"},
+      {"type": "MEDICAL_CONDITION", "value": "depression"},
+      {"type": "EMAIL", "value": "me@domain.com"}
+    ]
+  },
+  {
+    "id": 27,
+    "prompt": "Contact me at +1 (555) 234-5678. I am dealing with osteoporosis.",
+    "expected": [
+      {"type": "PHONE", "value": "+1 (555) 234-5678"},
+      {"type": "MEDICAL_CONDITION", "value": "osteoporosis"}
+    ]
+  },
+  {
+    "id": 28,
+    "prompt": "My address is 555 Maple Lane, Miami, FL 33101 and I take Omeprazole.",
+    "expected": [
+      {"type": "ADDRESS", "value": "555 Maple Lane, Miami, FL 33101"},
+      {"type": "MEDICATION", "value": "Omeprazole"}
+    ]
+  },
+  {
+    "id": 29,
+    "prompt": "The patient has influenza and needs Aspirin. DOB is 11/11/1975.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "influenza"},
+      {"type": "MEDICATION", "value": "Aspirin"},
+      {"type": "DATE_OF_BIRTH", "value": "11/11/1975"}
+    ]
+  },
+  {
+    "id": 30,
+    "prompt": "Policy number: PQR1234567. Address: 202 Pine Court, Denver, CO 80201.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "PQR1234567"},
+      {"type": "ADDRESS", "value": "202 Pine Court, Denver, CO 80201"}
+    ]
+  },
+  {
+    "id": 31,
+    "prompt": "I was diagnosed with dementia last year and I am taking Metformin for diabetes.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "dementia"},
+      {"type": "MEDICATION", "value": "Metformin"},
+      {"type": "MEDICAL_CONDITION", "value": "diabetes"}
+    ]
+  },
+  {
+    "id": 32,
+    "prompt": "My email is test.user@gmail.com and my phone number is 415-555-2671.",
+    "expected": [
+      {"type": "EMAIL", "value": "test.user@gmail.com"},
+      {"type": "PHONE", "value": "415-555-2671"}
+    ]
+  },
+  {
+    "id": 33,
+    "prompt": "I have asthma and use Albuterol. My date of birth is 1994-06-30.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "asthma"},
+      {"type": "MEDICATION", "value": "Albuterol"},
+      {"type": "DATE_OF_BIRTH", "value": "1994-06-30"}
+    ]
+  },
+  {
+    "id": 34,
+    "prompt": "Please update my record: Address is 333 Birch St, Portland, OR 97201. Phone is 503-555-0122.",
+    "expected": [
+      {"type": "ADDRESS", "value": "333 Birch St, Portland, OR 97201"},
+      {"type": "PHONE", "value": "503-555-0122"}
+    ]
+  },
+  {
+    "id": 35,
+    "prompt": "Member ID: STU9876543. Email: active-member@insurance.com.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "STU9876543"},
+      {"type": "EMAIL", "value": "active-member@insurance.com"}
+    ]
+  },
+  {
+    "id": 36,
+    "prompt": "My doctor prescribed Lisinopril for my hypertension.",
+    "expected": [
+      {"type": "MEDICATION", "value": "Lisinopril"},
+      {"type": "MEDICAL_CONDITION", "value": "hypertension"}
+    ]
+  },
+  {
+    "id": 37,
+    "prompt": "DOB: 12 Jan 1988. Condition: cancer.",
+    "expected": [
+      {"type": "DATE_OF_BIRTH", "value": "12 Jan 1988"},
+      {"type": "MEDICAL_CONDITION", "value": "cancer"}
+    ]
+  },
+  {
+    "id": 38,
+    "prompt": "I have asthma. Please send information to 999 Cedar Place, Boston, MA 02108.",
+    "expected": [
+      {"type": "MEDICAL_CONDITION", "value": "asthma"},
+      {"type": "ADDRESS", "value": "999 Cedar Place, Boston, MA 02108"}
+    ]
+  },
+  {
+    "id": 39,
+    "prompt": "Policy: VWX98765432. DOB: 02-28-1970.",
+    "expected": [
+      {"type": "HEALTH_INSURANCE_ID", "value": "VWX98765432"},
+      {"type": "DATE_OF_BIRTH", "value": "02-28-1970"}
+    ]
+  },
+  {
+    "id": 40,
+    "prompt": "My medications are Ibuprofen and Metformin. I have arthritis and diabetes.",
+    "expected": [
+      {"type": "MEDICATION", "value": "Ibuprofen"},
+      {"type": "MEDICATION", "value": "Metformin"},
+      {"type": "MEDICAL_CONDITION", "value": "arthritis"},
+      {"type": "MEDICAL_CONDITION", "value": "diabetes"}
+    ]
+  },
+  {
+    "id": 41,
+    "prompt": "How do I build a simple web application using Python?",
+    "expected": []
+  },
+  {
+    "id": 42,
+    "prompt": "What is the capital of France and what is its population?",
+    "expected": []
+  },
+  {
+    "id": 43,
+    "prompt": "Write a python function to compute the Fibonacci sequence.",
+    "expected": []
+  },
+  {
+    "id": 44,
+    "prompt": "Explain the difference between supervised and unsupervised learning.",
+    "expected": []
+  },
+  {
+    "id": 45,
+    "prompt": "Give me a healthy chocolate chip cookie recipe.",
+    "expected": []
+  },
+  {
+    "id": 46,
+    "prompt": "What is the weather like in Tokyo during October?",
+    "expected": []
+  },
+  {
+    "id": 47,
+    "prompt": "Who wrote the play Hamlet and when was it published?",
+    "expected": []
+  },
+  {
+    "id": 48,
+    "prompt": "I need help with my homework: explain gravity.",
+    "expected": []
+  },
+  {
+    "id": 49,
+    "prompt": "Can you design a basic relational database schema for an online bookstore?",
+    "expected": []
+  },
+  {
+    "id": 50,
+    "prompt": "What are the core design principles of RESTful APIs?",
+    "expected": []
+  }
+]

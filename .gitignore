@@ -10,8 +10,8 @@ htmlcov/
 
 # Local reports and outputs
 reports/
-*.json
-*.txt
+input.txt
+response.txt
 
 # IDE / System files
 .vscode/
